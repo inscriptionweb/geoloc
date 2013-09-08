@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Zessx - Géolocalisation</title>
+
+		<link href='assets/css/app.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body onload="load()">
+		
+		<form action="#" onsubmit="showAddress(this.address.value); return false" id="formgoogle" name="formgoogle">
+			<label for="address">Recherche : </label>
+			<input type="text" size="60" id="address" name="address" placeholder="adresse, ville, france" value="" />
+		</form>
+
+		<input id="ll" type="text" title="Latitude / Longitude" onClick="this.select()">
+		<input id="zoom" type="text" title="Zoom" onClick="this.select()">
+		<button id="generate" onclick="generate()">Générer la GMap</button>
+		<input id="link" type="text" title="Lien direct" onClick="this.select()">
+		
+		<div id="map"></div>
+		<div id="mask"></div>
+		<textarea id="code" onClick="this.select()"></textarea>
+		
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+	</body>
+</html>
